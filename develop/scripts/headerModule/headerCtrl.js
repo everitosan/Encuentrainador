@@ -1,19 +1,22 @@
-angular.module('hackAManoApp.controllers',['ui.bootstrap'])
-	.controller('headerCtrl', ['$scope', function($scope){
+angular.module('hackAManoApp.controllers',[])
+	.controller('headerCtrl', ['$scope', '$modal', function($scope, $modal){
 
 		$scope.animationsEnabled = true;
-		$scope.login = function(){
+		
+		$scope.logIn = function(){
 
-			var modalInstance = $modal.open({
-      			animation: $scope.animationsEnabled,
-		      	templateUrl: 'myModalContent.html',
-		      	controller: 'ModalInstanceCtrl',
-		     	size: size,
-		      	resolve: {
-		        items: function () {
-		          return $scope.items;
-		        }
-		      }
+			var modalIntsance = $modal.open({
+		      templateUrl: 'templates/LogInModule/modalTmpl.html',
+		      controller: 'LogInCtrl',
+		      size: 'lg'
+		    });
+		};
+
+		$scope.signUp = function () {
+			var modalIntsance = $modal.open({
+		      templateUrl: 'templates/signUpModule/modalTmpl.html',
+		      controller: 'signUpCtrl',
+		      size: 'lg'
 		    });
 		};
 	}]);
