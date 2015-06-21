@@ -33,7 +33,10 @@ module.exports = function(grunt) {
 		},
 		stylus : {
 			compile: {
-				files: {"exports/css/style.css": ["develop/styl/*.styl", "develop/scripts/**/*.styl", "bower_components/normalize.styl/normalize.styl"]}
+				files: {"exports/css/style.css": ["develop/styl/*.styl", 
+												  "develop/scripts/**/*.styl", 
+												  "bower_components/normalize.styl/normalize.styl",
+												  "bower_components/bootstrap-stylus/bootstrap/index.styl"]}
 			}
 		},
 		browserify: {
@@ -94,7 +97,7 @@ module.exports = function(grunt) {
 				//tasks: 'browserify'
 			},
 			css: {
-				files: ['develop/styl/*.styl', 'develop/scripts/**/*.styl', 'bower_components/normalize.styl/normalize.styl'],
+				files: ['develop/styl/*.styl', 'develop/scripts/**/*.styl', 'bower_components/normalize.styl/normalize.styl', "bower_components/bootstrap-stylus/bootstrap/index.styl"],
 				tasks: 'stylus'
 			},
 			html: {
