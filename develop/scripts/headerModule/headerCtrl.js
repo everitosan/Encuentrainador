@@ -22,5 +22,13 @@ angular.module('hackAManoApp.controllers',[])
 		    });
 		};
 
+		$scope.report = function(){
+			var modalIntsance = $modal.open({
+				templateUrl: 'templates/reportModule/modalTmpl.html',
+				controller : 'reportCtrl',
+				size: 'lg'
+			});
+		};
+
 	
 	}]);
