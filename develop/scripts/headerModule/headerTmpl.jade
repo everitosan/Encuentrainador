@@ -8,8 +8,18 @@
 						span.icon-bar
 					a.navbar-brand(href='#') Encontrainador
 				.navbar-collapse.collapse
-					ul.nav.navbar-nav.navbar-right
+					ul.nav.navbar-nav.navbar-right(ng-show="!open")
 						li 
-							a(href="#", ng-click="signUp()") Sign Up
+							a(ng-click="logIn('signUp')") Sign Up
 						li 
-							a(href="#", ng-click="logIn()") Log In
+							a(ng-click="logIn('logIn')") Log In
+
+					ul.nav.navbar-nav.navbar-right(ng-show="open")
+						li 
+							div.searcher
+								input(type="text",placeholder="Buscar ...")
+								span(class="glyphicon glyphicon-search" aria-hidden="true")
+						li 
+							a(ng-click="report()") Reportar
+						li 
+							a(ng-click="miAcount()") Mi Cuenta

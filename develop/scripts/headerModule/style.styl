@@ -1,13 +1,37 @@
 #header
-	background rgba(255,255,255,.13)
-	border none
-	
+    background rgba(255,255,255,.13)
+    border none
+    height 50px
+    .searcher
+        width 200px
+        input
+            width 60%
+            height 50px
+            padding 0 1em
+            color #000
+        span
+            background #2770B0
+            height 49px
+            display inline-block
+            vertical-align top
+            line-height 50px
+            font-size 2.2em
+            width 60px
+            text-align center
+            cursor pointer
+
 .navbar-default 
-	.navbar-brand 
-		color white
-		
+    .navbar-brand 
+        color white
+        
 .navbar-default 
-	.navbar-nav > li > a 
-		background #2770B0
-		color white
-		margin-right 5px
+    .navbar-nav > li > a 
+        background #2770B0
+        cursor pointer
+        color white
+        margin-right 5px
+        &:hover
+            background #2770B0
+
+.input-group-addon:last-child
+    background #2770B0
