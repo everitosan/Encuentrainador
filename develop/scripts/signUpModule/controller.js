@@ -4,6 +4,6 @@
 	angular.module('hackAManoApp.controllers')
 		.controller('signUpCtrl', 
 			function signUpCtrl ($scope) {
-				//content
+				
 			});
 })();

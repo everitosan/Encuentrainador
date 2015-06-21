@@ -1,1 +1,43 @@
-div Hola
+div#logInModule
+	h2 Log In
+
+	img(class="fbInit", ng-click="intentFBLog()" , ng-src="../../img/FBbut.png")
+	//-img(class="fbInit", ng-click="loginGp()" , ng-src="../../img/GPbut.png")
+
+	div(class="center", ng-show="{{type==='logIn'}}")
+		p o crea una cuenta
+
+
+		form(no-validate)
+			div
+				label Usuario 
+				br
+				input(type="text")
+			div
+				label Contraseña
+				br
+				input(type="password")
+			div
+				div.button-blue
+					span LogIn
+
+	div(class="center", ng-show="{{type==='signUp'}}")
+
+		p o entra con tu cuenta
+
+		form(no-validate)
+			div
+				label Usuario 
+				br
+				input(type="text")
+			div
+				label Contraseña
+				br
+				input(type="password")
+			div
+				label Confirma contraseña
+				br
+				input(type="password")
+			div
+				div.button-blue
+					span SignUp
