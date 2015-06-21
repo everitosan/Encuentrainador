@@ -1,6 +1,7 @@
 (function(){
 	angular.module('hackAManoApp',  [
-    'ngRoute',
+		'ui.bootstrap',
+    	'ngRoute',
 		'hackAManoApp.directives',
 		'hackAManoApp.controllers',
 		'hackAManoApp.services',
