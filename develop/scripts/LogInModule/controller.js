@@ -18,7 +18,7 @@
 		     });
 		}])
 		.controller('LogInCtrl', 
-			function LogInCtrl ($scope, Facebook, GooglePlus, $location, $modalInstance, $rootScope) {
+			function LogInCtrl ($scope, Facebook, GooglePlus, $location, $modalInstance, $rootScope,  $firebaseObject) {
 
 				$scope.type = $rootScope.modalType;
 
@@ -64,7 +64,16 @@
 			    var me = function() {
 			      Facebook.api('/me', function(response) {
 			        $scope.user = response;
-			        console.log(response);
+			        var ref = new Firebase("https://encontrainador.firebaseio.com");
+
+			        var obj = $firebaseObject(ref);
+
+			        obj.user = response;
+			        obj.$save().then(function(ref){
+			        	console.log(ref);
+			        }, function(err){
+			        	console.log(err);
+			        });
 
 			        $modalInstance.close();
 			        $location.url('/searchs');
