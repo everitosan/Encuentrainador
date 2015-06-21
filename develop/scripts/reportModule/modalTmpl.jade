@@ -1,0 +1,26 @@
+div#reportModal
+	h1 Reportar
+
+	div.row
+		form(no-validate)
+			div.col-md-6
+					div
+						label Título
+						input(type="text", ng-model="form.title")
+					div
+						label Descripción
+						input(type="text", ng-model="form.description")
+					//-div
+						label Foto
+						input(type="file", file-model="form.photo")
+			div.col-md-6
+				p Por favor escribe dos preguntas de seguridad sobre el objeto, que no se resuelvan viendo la fotografía.
+				
+					div
+						label Pregunta1
+						input(type="text", ng-model="form.question1")
+					div
+						label Pregunta2
+						input(type="text", ng-model="form.question2")
+			div.button-blue
+					span(ng-click="send()") Listo
