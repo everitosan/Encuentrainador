@@ -18,7 +18,10 @@
     "vivus": "~0.2.1",
     "normalize.styl": "~3.0.3",
     "angular-bootstrap": "~0.13.0",
-    "bootstrap-stylus": "~4.0.4"
+    "bootstrap-stylus": "~4.0.4",
+    "firebase": "~2.2.7",
+    "angularfire": "~1.1.1",
+    "angular-file-model": "~0.3.0"
   },
   "devDependencies": {
     "threejs": "*"
