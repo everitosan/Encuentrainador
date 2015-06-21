@@ -1,7 +1,9 @@
 (function(){
 	angular.module('hackAManoApp',  [
 		'ui.bootstrap',
+		'file-model',
 		'googleplus',
+		'firebase',
 		'facebook',
     	'ngRoute',
 		'hackAManoApp.directives',
@@ -20,7 +22,8 @@
 					templateUrl: 'templates/homeModule/tmpl.html'
 				})
 				.when("/searchs", {
-					templateUrl: 'templates/homeInModule/tmpl.html'
+					templateUrl: 'templates/homeInModule/tmpl.html',
+					controller: 'homeInCtrl'
 				});
 		}]);
 
